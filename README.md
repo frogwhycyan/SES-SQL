@@ -12,7 +12,7 @@
 We decompose the natural language question into logical clauses based on semantic units and incorporate this information into the prompt, allowing the LLM to generate Pre-SQL. 
 At this stage of generating Pre-SQL, we ensure that the model fully utilizes the information from the **Question** and **hint**, as well as the DB schema information without value details.
 
-<h3>2. SQL-based Value Extractor</h3>
+<h3>2. SQL-driven Schema Linking</h3>
 
 We instruct the model to extract the tables and columns involved in the Pre-SQL and then construct the following information:
 
@@ -42,7 +42,7 @@ Execute the Second-SQL on the database, then integrate the execution results wit
 
 
 ```plaintext
-pre-second-SQL/
+SES-SQL/
 ├── README.md
 ├── requirements.txt
 │
@@ -54,7 +54,7 @@ pre-second-SQL/
 │   └── sql_data_process_BIRD.py
 │
 ├── run/
-│   └── Pre_Second_SQL.py
+│   └── SES_SQL.py
 │
 └── tools/
 ```
