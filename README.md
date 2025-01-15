@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="center">
   <h1>SES-SQL: A Simple Yet Effective Stepwise Prompting Framework for Text-to-SQL</h1>
 </div>
 
