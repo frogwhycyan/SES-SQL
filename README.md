@@ -63,8 +63,8 @@ SES-SQL/
 
 
 ```python
-conda create -n ICL-SQL python=3.10
-conda activate ICL-SQL
+conda create -n SES-SQL python=3.10
+conda activate SES-SQL
 pip install -r requirements.txt
 ```
 
@@ -106,7 +106,7 @@ Please run the following code to evaluate, and set the parameters accordingly.
 
 ```python
 cd evaluation
-python evaluation.py --predicted_sql_path ../output/ICL-SQL.sql --ground_truth_path ../data/database/dev_20240627/dev.sql --data_mode dev --db_root_path ../data/database/dev_20240627/dev_databases/ --diff_json_path ../data/database/dev_20240627/dev.json
+python evaluation.py --predicted_sql_path ../output/SES-SQL.sql --ground_truth_path ../data/database/dev_20240627/dev.sql --data_mode dev --db_root_path ../data/database/dev_20240627/dev_databases/ --diff_json_path ../data/database/dev_20240627/dev.json
 ```
 
 <h2>Main Results</h2>
