@@ -1,6 +1,5 @@
 <div style="text-align: center;">
-  <h1>SES-SQL: A Simple Yet Effective Stepwise Prompting 
-Framework for Text-to-SQL</h1>
+  <h1>SES-SQL: A Simple Yet Effective Stepwise Prompting <br>Framework for Text-to-SQL</h1>
 </div>
 
 <h2>Overview</h2>
