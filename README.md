@@ -95,28 +95,12 @@ Please set the parameters of ICL-SQL. In ICL-SQL.py, mainly set database_file_pa
 
 ```python
 cd run/
-python ICL-SQL.py
+python SES-SQL.py
 ```
 
 You will get the generated SQL file in the output after execution.
 
-<h3>3. Prompt tokens on dev set</h3>
-
-20M input tokens       About $50
-
-1.5M output tokens     About $15
-
 <h2>Evaluation</h2>
-
-
-In SQL, the order of columns in a `SELECT` statement can vary without affecting the correctness of the query results. For example:
-
-1. `SELECT A, B FROM C;`
-2. `SELECT B, A FROM C;`
-
-Both queries retrieve the same data from table `C`, but the columns are presented in different orders.
-
-Since SQL query results may contain multiple rows and columns, directly comparing the order of two result sets can lead to incorrect judgments. By sorting the elements within each tuple, it ensures that the element order is consistent when comparing result sets, thereby achieving a more reliable comparison.
 
 Please run the following code to evaluate, and set the parameters accordingly.
 
@@ -130,16 +114,3 @@ python evaluation.py --predicted_sql_path ../output/ICL-SQL.sql --ground_truth_p
 ### Execution Accuracy
 
 ![ICL-SQL](figs/main_result.png)
-
-<h2>NOTE</h2>
-
-
-1. The files in vector_data in the code were generated after running on the dev dataset, move all the files in vector_data elsewhere before you run on the test dataset.
-
-2. The column_description in the csv file in database_description is used when running the dev dataset. If the content saved in column_meaning.json and the column_description in the csv file are similar content, then we need to use column_meaning.json.
-
-3. API_KEYS has been placed in config files, specifically in data_process/data_process_config.py and run/run_config.py.
-
-4. output/ICL-SQL-dev.sql holds the Dev SQL File, which is the file generated after running on the dev.
-
-5. We currently have a balance of $120 US in our account, if this is not enough please contact us via email.
